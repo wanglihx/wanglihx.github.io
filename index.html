@@ -1,24 +1,23 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>王力 | 个人学术主页</title>
+  <meta name="description" content="Wang Li - Postdoctoral Application Profile" />
+  <title>Wang Li, M.D. | Postdoctoral Application Profile</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Serif+SC:wght@400;600;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Merriweather:wght@400;700;900&display=swap');
 
     :root {
-      --bg: #f3f7f8;
-      --bg-deep: #dce8ec;
-      --card: rgba(255, 255, 255, 0.82);
-      --ink: #102033;
-      --muted: #4d5f73;
-      --primary: #0f6d74;
-      --primary-strong: #094f55;
-      --accent: #c97d1a;
-      --line: rgba(16, 32, 51, 0.12);
-      --shadow: 0 18px 45px rgba(15, 57, 71, 0.12);
+      --bg: #f4f7f3;
+      --surface: rgba(255, 255, 255, 0.86);
+      --ink: #142433;
+      --muted: #5b6b7a;
+      --line: rgba(20, 36, 51, 0.14);
+      --teal-1: #0d4e58;
+      --teal-2: #0c7882;
       --radius: 18px;
+      --shadow: 0 20px 45px rgba(14, 42, 57, 0.14);
     }
 
     * { box-sizing: border-box; }
@@ -26,27 +25,27 @@
     body {
       margin: 0;
       color: var(--ink);
-      font-family: "Manrope", "Microsoft YaHei", sans-serif;
+      font-family: "Archivo", "Segoe UI", sans-serif;
       background:
-        radial-gradient(1100px 420px at -5% -8%, #cfe4ea 0%, transparent 70%),
-        radial-gradient(900px 360px at 110% 10%, #f6dcbf 0%, transparent 72%),
-        linear-gradient(160deg, var(--bg) 0%, var(--bg-deep) 100%);
+        radial-gradient(1000px 420px at -10% -6%, #d8ece4 0%, transparent 72%),
+        radial-gradient(900px 350px at 112% 0%, #fde2c8 0%, transparent 74%),
+        linear-gradient(155deg, #f6f8f4 0%, #edf3ef 100%);
       min-height: 100vh;
     }
 
-    .shell {
-      width: min(1120px, 92vw);
-      margin: 26px auto 34px;
-      padding: 18px;
+    .container {
+      width: min(1140px, 92vw);
+      margin: 24px auto 34px;
+      padding: 8px;
     }
 
     .hero {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, #0c3442 0%, #0f6d74 62%, #1f8d96 100%);
-      color: #ecf6f8;
-      border-radius: 24px;
-      padding: 34px 28px 28px;
+      border-radius: 26px;
+      padding: 34px 30px 28px;
+      color: #effafc;
+      background: linear-gradient(126deg, #082e36 0%, var(--teal-1) 55%, var(--teal-2) 100%);
       box-shadow: var(--shadow);
       isolation: isolate;
     }
@@ -54,301 +53,430 @@
     .hero::after {
       content: "";
       position: absolute;
-      width: 330px;
-      height: 330px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
-      right: -90px;
-      top: -110px;
-      background: radial-gradient(circle, rgba(255,255,255,0.24), rgba(255,255,255,0.02));
+      right: -100px;
+      top: -120px;
+      background: radial-gradient(circle, rgba(255,255,255,0.26), rgba(255,255,255,0));
       z-index: -1;
     }
 
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
     .kicker {
-      letter-spacing: 0.12em;
+      margin: 0 0 8px;
+      letter-spacing: .14em;
       text-transform: uppercase;
       font-size: 12px;
-      opacity: 0.88;
-      margin-bottom: 8px;
       font-weight: 700;
+      opacity: .92;
     }
 
     h1 {
       margin: 0;
-      font-family: "Noto Serif SC", serif;
-      font-size: clamp(32px, 5.5vw, 52px);
+      font-family: "Merriweather", serif;
+      font-size: clamp(32px, 5.4vw, 56px);
       line-height: 1.08;
       font-weight: 900;
     }
 
     .subtitle {
-      margin-top: 10px;
-      font-size: clamp(16px, 2.2vw, 21px);
-      opacity: 0.95;
+      margin: 10px 0 0;
+      max-width: 760px;
+      font-size: clamp(15px, 2.1vw, 21px);
+      opacity: .96;
+      line-height: 1.45;
+    }
+
+    .meta-box {
+      min-width: 300px;
+      border: 1px solid rgba(255,255,255,.28);
+      background: rgba(255,255,255,.15);
+      border-radius: 14px;
+      padding: 12px 13px;
+      font-size: 13px;
+      line-height: 1.68;
+      backdrop-filter: blur(4px);
+    }
+
+    .meta-box a {
+      color: #f2fdff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.35);
     }
 
     .chips {
-      margin-top: 18px;
+      margin-top: 16px;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 9px;
     }
 
     .chip {
-      background: rgba(255, 255, 255, 0.18);
-      border: 1px solid rgba(255, 255, 255, 0.28);
       border-radius: 999px;
-      padding: 8px 13px;
-      font-size: 13px;
-      backdrop-filter: blur(3px);
+      padding: 8px 12px;
+      font-size: 12px;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.14);
     }
 
     .grid {
-      margin-top: 18px;
+      margin-top: 16px;
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(12, minmax(0, 1fr));
       gap: 14px;
     }
 
     .card {
-      background: var(--card);
-      border: 1px solid var(--line);
+      grid-column: span 12;
       border-radius: var(--radius);
-      padding: 18px 18px;
-      box-shadow: 0 8px 20px rgba(20, 47, 58, 0.06);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      padding: 20px;
+      box-shadow: 0 8px 22px rgba(24, 44, 58, .07);
       backdrop-filter: blur(6px);
     }
 
-    .card h2 {
-      margin: 0 0 12px;
-      font-size: 18px;
-      font-family: "Noto Serif SC", serif;
-    }
-
-    .basic { grid-column: span 5; }
-    .research { grid-column: span 7; }
-    .highlights { grid-column: span 7; }
-    .exchange { grid-column: span 5; }
-    .skills { grid-column: span 12; }
-
-    .meta {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      grid-template-columns: 108px 1fr;
-      row-gap: 10px;
-      column-gap: 8px;
-      font-size: 14px;
-    }
-
-    .meta dt {
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .meta dd {
-      margin: 0;
-      font-weight: 600;
-    }
-
-    .lead {
-      margin: 0;
-      color: #233649;
-      line-height: 1.72;
-      font-size: 15px;
-    }
-
-    .metric-wrap {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
+    .title-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 12px;
     }
 
-    .metric {
-      border-radius: 14px;
+    h2 {
+      margin: 0;
+      font-family: "Merriweather", serif;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .title-en {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .overview-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 14px;
+    }
+
+    .summary {
+      margin: 0;
+      line-height: 1.76;
+      font-size: 15px;
+      color: #253849;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stat {
+      border-radius: 12px;
       border: 1px solid var(--line);
-      padding: 10px 11px;
-      background: rgba(255,255,255,0.72);
+      padding: 11px;
+      background: rgba(255,255,255,.72);
     }
 
-    .metric strong {
+    .stat strong {
       display: block;
-      font-size: 22px;
-      color: var(--primary-strong);
-      line-height: 1.15;
+      color: var(--teal-1);
+      font-size: 24px;
+      line-height: 1.1;
+      margin-bottom: 3px;
     }
 
-    .metric span {
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .timeline {
+      margin-top: 6px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .stage {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 14px 13px;
+      background: rgba(255,255,255,.72);
+      overflow: hidden;
+    }
+
+    .stage::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--teal-2), #1697a3);
+    }
+
+    .stage-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+      padding-left: 4px;
+    }
+
+    .stage-top h3 {
+      margin: 0;
+      color: var(--teal-1);
+      font-size: 17px;
+      font-family: "Merriweather", serif;
+    }
+
+    .period {
       font-size: 12px;
       color: var(--muted);
+      font-weight: 700;
+      letter-spacing: .02em;
+      background: #edf7f6;
+      border: 1px solid rgba(13, 78, 88, .2);
+      border-radius: 999px;
+      padding: 4px 9px;
+    }
+
+    .stage p {
+      margin: 0;
+      color: #2a3e51;
+      line-height: 1.62;
+      font-size: 14px;
+      padding-left: 4px;
+    }
+
+    .outputs {
+      margin: 8px 0 0;
+      padding-left: 22px;
+      color: #23384a;
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .outputs a {
+      color: var(--teal-1);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(13, 78, 88, .35);
+    }
+
+    .outputs a:hover {
+      border-bottom-color: var(--teal-1);
+    }
+
+    .other {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .subcard {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: rgba(255,255,255,.74);
+    }
+
+    .subcard h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: var(--teal-1);
     }
 
     .list {
       margin: 0;
       padding-left: 18px;
-      color: #1d3248;
-      line-height: 1.66;
+      line-height: 1.7;
+      color: #2a3f52;
       font-size: 14px;
-    }
-
-    .timeline {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
-
-    .timeline li {
-      border-left: 3px solid rgba(15, 109, 116, 0.35);
-      padding: 4px 0 4px 12px;
-      line-height: 1.5;
-      font-size: 14px;
-    }
-
-    .timeline b {
-      color: var(--primary-strong);
-    }
-
-    .foot {
-      margin-top: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 13px;
-      color: var(--muted);
     }
 
     .contact {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
+      margin-top: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(192, 109, 23, .3);
+      background: linear-gradient(140deg, #fff0de, #fff6e8);
+      padding: 13px;
+      color: #5a3a17;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
     .contact a {
-      color: var(--primary-strong);
+      color: #6b3f11;
       text-decoration: none;
+      border-bottom: 1px solid rgba(107, 63, 17, .35);
       font-weight: 700;
-      border-bottom: 1px solid transparent;
     }
 
-    .contact a:hover {
-      border-bottom-color: var(--primary-strong);
-    }
-
-    .fade {
+    .reveal {
       opacity: 0;
-      transform: translateY(16px);
-      animation: rise 0.65s ease forwards;
+      transform: translateY(14px);
+      animation: reveal .65s ease forwards;
     }
 
-    .delay-1 { animation-delay: .06s; }
-    .delay-2 { animation-delay: .12s; }
-    .delay-3 { animation-delay: .18s; }
-    .delay-4 { animation-delay: .24s; }
+    .d1 { animation-delay: .08s; }
+    .d2 { animation-delay: .16s; }
+    .d3 { animation-delay: .24s; }
 
-    @keyframes rise {
+    @keyframes reveal {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    @media (max-width: 920px) {
-      .basic, .research, .highlights, .exchange, .skills { grid-column: span 12; }
-      .metric-wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 930px) {
+      .overview-layout { grid-template-columns: 1fr; }
+      .other { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 620px) {
-      .shell { width: 94vw; margin: 14px auto 18px; padding: 10px; }
-      .hero { border-radius: 18px; padding: 24px 18px 20px; }
-      .chips { gap: 8px; }
-      .chip { font-size: 12px; padding: 6px 11px; }
-      .card { padding: 15px 14px; border-radius: 14px; }
-      .meta { grid-template-columns: 86px 1fr; }
-      .metric-wrap { grid-template-columns: 1fr; }
+      .container { width: 95vw; margin: 12px auto 18px; }
+      .hero { border-radius: 20px; padding: 22px 16px 18px; }
+      .card { padding: 16px 13px; }
+      h2 { font-size: 21px; }
+      .stats { grid-template-columns: 1fr; }
+      .meta-box { width: 100%; min-width: 0; }
     }
   </style>
 </head>
 <body>
-  <main class="shell">
-    <section class="hero fade">
-      <div class="kicker">Academic Profile</div>
-      <h1>王力</h1>
-      <div class="subtitle">四川大学华西医院 | 八年制博士（骨科运动医学 · 关节镜外科）</div>
-      <div class="chips">
-        <span class="chip">研究方向：多模态生成式人工智能与医学交叉</span>
-        <span class="chip">导师：李箭</span>
-        <span class="chip">华西临床医学院</span>
+  <main class="container">
+    <header class="hero reveal">
+      <div class="hero-top">
+        <div>
+          <p class="kicker">Postdoctoral Application Profile</p>
+          <h1>Wang Li, M.D.</h1>
+          <p class="subtitle">Sports Medicine Doctoral Program (8-year track), West China Hospital, Sichuan University (Sep 2018 - Jun 2026)<br/>Research focus: AI x Sports Medicine (NLP / CV / Multimodal Models)</p>
+        </div>
+        <div class="meta-box">
+          <div>Doctoral research and specialty clinical training: Sep 2023 - Jun 2026</div>
+          <div>Google Scholar: <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=Kqj-3jkAAAAJ&hl">Scholar Profile</a></div>
+        </div>
       </div>
-    </section>
+      <div class="chips">
+        <span class="chip">H-index: 8</span>
+        <span class="chip">Total citations: 607</span>
+        <span class="chip">ESI Hot Paper / Highly Cited: 1</span>
+      </div>
+    </header>
 
     <section class="grid">
-      <article class="card basic fade delay-1">
-        <h2>基本信息</h2>
-        <dl class="meta">
-          <dt>姓名</dt><dd>王力</dd>
-          <dt>性别</dt><dd>男</dd>
-          <dt>出生年月</dt><dd>1999.10</dd>
-          <dt>籍贯</dt><dd>四川成都</dd>
-          <dt>学历</dt><dd>专业型博士（八年制）</dd>
-          <dt>专业</dt><dd>骨科运动医学（关节镜外科）</dd>
-          <dt>毕业院校</dt><dd>四川大学华西临床医学院</dd>
-        </dl>
-      </article>
-
-      <article class="card research fade delay-2">
-        <h2>科研概览</h2>
-        <p class="lead">
-          博士阶段主研多模态生成式人工智能在膝骨关节炎中的关键技术探索与应用开发，聚焦算法与临床场景融合，推动运动医学与智能医学的交叉研究。
-          以第一及共同第一作者身份发表论文 5 篇，其中含 IF &gt; 15 的 Article（第一作者）1 篇；WOS 引用量 224 次，成果入选 ESI 高被引与 ESI 热点论文。
-        </p>
-      </article>
-
-      <article class="card highlights fade delay-2">
-        <h2>学术亮点</h2>
-        <div class="metric-wrap">
-          <div class="metric"><strong>5 篇</strong><span>第一 / 共同第一作者论文</span></div>
-          <div class="metric"><strong>224 次</strong><span>WOS 引用量</span></div>
-          <div class="metric"><strong>1 篇</strong><span>IF &gt; 15 Article（第一作者）</span></div>
+      <article class="card reveal d2">
+        <div class="title-row">
+          <h2>1. Research Experience (4 Phases)</h2>
+          <span class="title-en">Research Timeline</span>
         </div>
-        <ul class="list">
-          <li>研究成果入选 ESI 高被引论文与 ESI 热点论文。</li>
-          <li>参与英文专著编著 1 部（排名第 5）。</li>
-          <li>参与发明专利申请 1 项。</li>
-          <li>在 CSSM2024、APKASS2024、CSMDA2025 等会议进行学术发言。</li>
-        </ul>
-      </article>
 
-      <article class="card exchange fade delay-3">
-        <h2>国际交流</h2>
-        <ul class="timeline">
-          <li><b>2024.07</b> 英国圣乔治医院临床轮转项目（2 周）</li>
-          <li><b>2024.10</b> 中国海南 APKASS 2024 暨第 20 届 IFOSAM 联合大会（国际会议）</li>
-          <li><b>2025.01</b> 意大利圣心大学运动医学与心血管健康课程学习（2 周，6 个欧洲学分）</li>
-        </ul>
-      </article>
+        <div class="timeline">
+          <section class="stage">
+            <div class="stage-top">
+              <h3>Phase 1: AR/VR for Sports Rehabilitation</h3>
+              <span class="period">Nov 2022 - Dec 2023</span>
+            </div>
+            <p>Initial entry into interdisciplinary research, focusing on digital rehabilitation and translational feasibility in sports medicine.</p>
+            <ul class="outputs">
+              <li>Co-authored a book chapter: <a target="_blank" rel="noopener" href="https://link.springer.com/rwe/10.1007/978-3-642-36801-1_315-1">Springer chapter</a></li>
+              <li>Clinical pilot protocol and publication output (JCR Q1, IF 2.8): <a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/38057846/">PubMed</a></li>
+              <li>Core capability gained: literature review and foundational AI concepts</li>
+            </ul>
+          </section>
 
-      <article class="card skills fade delay-4">
-        <h2>专业技能与资质</h2>
-        <ul class="list">
-          <li>执业医师资格证书：454 分（百分等级 A）</li>
-          <li>英语能力：CET-6 545 分，IELTS 6.5 分</li>
-          <li>方向特长：医学科研与 AI 交叉、运动医学临床与研究协同</li>
-        </ul>
-        <div class="foot">
-          <div>页面根据《博士简历-王力-四川大学-1页.pdf》内容整理</div>
-          <div class="contact">
-            <a href="mailto:wangli1@stu.scu.edu.cn">wangli1@stu.scu.edu.cn</a>
-            <a href="tel:1816119031">1816119031</a>
-          </div>
+          <section class="stage">
+            <div class="stage-top">
+              <h3>Phase 2: LLM for Knee OA Management</h3>
+              <span class="period">Jun 2023 - Mar 2026</span>
+            </div>
+            <p>Developed LLM-based evaluation and RAG pipelines for clinical-guideline consistency and domain-specific QA performance.</p>
+            <ul class="outputs">
+              <li>npj Digital Medicine - Prompt engineering inconsistency and reliability with the evidence-based guideline for LLMs (JCR Q1, IF 15.1, ESI Hot Paper / Highly Cited): <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41746-024-01029-4">paper link</a></li>
+              <li>JMIR - DocOA: Evaluating and Enhancing Large Language Models Performance in Domain-Specific Medicine (JCR Q1, IF 6.0): <a target="_blank" rel="noopener" href="https://www.jmir.org/2024/1/e58158">paper link</a></li>
+              <li>Project manager, OpenCompass MedBench: <a target="_blank" rel="noopener" href="https://medbench.opencompass.org.cn/home">project page</a></li>
+              <li>Clinical pilot registration based on LLM application: ChiCTR2500107285</li>
+              <li>Core capability gained: programming and evaluation AI</li>
+            </ul>
+          </section>
+
+          <section class="stage">
+            <div class="stage-top">
+              <h3>Phase 3: Multimodal Diagnostic Capability Evaluation (LLaVA-OA)</h3>
+              <span class="period">Mar 2025 - Jan 2026</span>
+            </div>
+            <p>Evaluated component-level training strategies of multimodal LLMs to quantify each module's contribution in medical image classification tasks.</p>
+            <ul class="outputs">
+              <li>Project repository: <a target="_blank" rel="noopener" href="https://github.com/wanglihx/LLaVA-OA?tab=readme-ov-file">GitHub / LLaVA-OA</a></li>
+              <li>Core capability gained: model training and reproducible engineering experiments</li>
+            </ul>
+          </section>
+
+          <section class="stage">
+            <div class="stage-top">
+              <h3>Phase 4: Training-Free Biomechanical Twin System (SAM4Dcap)</h3>
+              <span class="period">Nov 2025 - Present</span>
+            </div>
+            <p>Built a training-free pipeline using monocular video and SAM 3D Body for human pose estimation and biomechanical analysis.</p>
+            <ul class="outputs">
+              <li>Project repository: <a target="_blank" rel="noopener" href="https://github.com/wanglihx/SAM4Dcap-core">GitHub / SAM4Dcap-core</a></li>
+              <li>Core capability gained: full-stack integration and vibe coding</li>
+            </ul>
+          </section>
         </div>
+      </article>
+
+      <article class="card reveal d3">
+        <div class="title-row">
+          <h2>2. Additional</h2>
+          <span class="title-en">Skills and Interests</span>
+        </div>
+
+        <div class="other">
+          <section class="subcard">
+            <h3>Skills and Credentials</h3>
+            <ul class="list">
+              <li>Programming: Python, PyTorch, Linux, large-scale data processing and training on cloud compute</li>
+              <li>National Licensed Physician Qualification</li>
+              <li>English: CET-6 (545), IELTS (6.5)</li>
+            </ul>
+          </section>
+
+          <section class="subcard">
+            <h3>Personal Interests</h3>
+            <ul class="list">
+              <li>Amateur Go (2-dan)</li>
+              <li>Basketball and swimming</li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="contact">
+          <strong>Contact</strong><br />
+          Email: <a href="mailto:wangli1@stu.scu.edu.cn">wangli1@stu.scu.edu.cn</a>
+        </section>
       </article>
     </section>
   </main>
 </body>
 </html>
-
